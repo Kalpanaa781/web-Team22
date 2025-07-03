@@ -1,0 +1,379 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 180px;
+  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  color: #00f2fe;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+  color: #00f2fe;
+}
+
+.sidebar footer {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar */
+.navbar {
+  background-color: #1c1c1c;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #00f2fe;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background-color: #2a2a2a;
+  min-width: 180px;
+  z-index: 10;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: #00f2fe;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-box {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 13px;
+}
+
+.wallet-btn {
+  background-color: #1e1aff;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.login-link {
+  color: #00f2fe;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Page Body */
+.content {
+  flex-grow: 1;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+/* Wallet Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide the default checkbox */
+.dropdown-toggle {
+  display: none;
+}
+
+/* Wallet Button */
+.wallet-btn {
+  background-color: #00e5ff;
+  color: #000;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  color: white;
+  min-width: 200px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  top: 110%;               /* appear just below the button */
+  left: 0;                 /* align to left edge of Wallet button */
+  z-index: 999;
+}
+
+/* Show dropdown when checkbox is checked */
+.dropdown-toggle:checked + .wallet-btn + .dropdown-content {
+  display: block;
+}
+
+/* Balance text styling */
+.dropdown-content h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: #00e5ff;
+}
+
+.dropdown-content p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Wallet Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-checkbox {
+  display: none;
+}
+
+.nav-link {
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #1f1f1f;
+  padding: 10px;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
+.dropdown-checkbox:checked + .nav-link + .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 12px;
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-item:hover {
+  background: #2c2c2c;
+  color: #00e5ff;
+}
+
+/* Modal */
+.modal-toggle {
+  display: none;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #1e1e1e;
+  flex-direction: row;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.modal-toggle:checked + .modal-overlay {
+  display: flex;
+}
+.transaction {
+  display: flex;
+  flex-direction: row;  /* Change from column to row */
+  gap: 10px; /* Add spacing between credited & debited */
+}
+.history-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures each date starts a new row */
+  gap: 20px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  color: cyan;
+  margin: 20px 0;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.day-column {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 0 8px cyan;
+}
+
+.date {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.transaction {
+  display: flex;
+  flex-direction: row; /* make credited and debited side by side */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.credited,
+.debited {
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.credited {
+  border-left: 4px solid green;
+  color: #00ff00;
+}
+
+.debited {
+  border-left: 4px solid red;
+  color: #ff4d4d;
+}

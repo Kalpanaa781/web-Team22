@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Transaction History</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: #00e5ff;
+    }
+
+    .container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      margin: 0 auto;
+      max-width: 900px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+      flex-direction: row;
+    }
+
+    .transaction-date {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 30px 0 10px;
+      color: #00e5ff;
+      border-bottom: 2px solid #00e5ff;
+      padding-bottom: 5px;
+    }
+
+    .entry {
+      padding: 15px;
+      background-color: #2a2a2a;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+      margin-bottom: 10px;
+      
+    }
+
+    .entry .title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .entry .amount {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .credit {
+      color: #00ff99;
+    }
+
+    .debit {
+      color: #ff4d4d;
+    }
+
+    .meta, .status {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .divider {
+      border-bottom: 2px solid #444;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Crypto Transaction History</h1>
+  <div class="container">
+    <div class="transaction-date">01 July 2025</div>
+
+    <div class="entry">
+      <div class="title">💰 Credited</div>
+      <div class="amount credit">+ ₹5,900.00</div>
+      <div class="meta">From: CoinDCX</div>
+      <div class="meta">TxID: 0x7fe...a12</div>
+      <div class="status">✓ Confirmed</div>
+    </div>
+    
+    <div class="entry">
+      <div class="title">💸 Debited</div>
+      <div class="amount debit">- ₹830.00</div>
+      <div class="meta">To: Binance Wallet</div>
+      <div class="meta">TxID: 0x6ac...e1b</div>
+      <div class="status">✓ Confirmed</div>
+    </div>
+    <div class="divider"></div>
+
+    <div class="transaction-date">02 July 2025</div>
+
+    <div class="entry">
+      <div class="title">💰 Credited</div>
+      <div class="amount credit">+ ₹3,250.00</div>
+      <div class="meta">From: Optimism</div>
+      <div class="meta">TxID: 0xdd4...c89</div>
+      <div class="status">✓ Confirmed</div>
+    </div>
+    <div class="entry">
+      <div class="title">💸 Debited</div>
+      <div class="amount debit">- ₹22,000.00</div>
+      <div class="meta">To: Binance</div>
+      <div class="meta">TxID: 0x1b3...a2d</div>
+      <div class="status">✓ Confirmed</div>
+    </div>
+    <div class="divider"></div>
+
+    <div class="transaction-date">03 July 2025</div>
+
+    <div class="entry">
+      <div class="title">💰 Credited</div>
+      <div class="amount credit">+ ₹14,500.00</div>
+      <div class="meta">From: Coinbase Wallet</div>
+      <div class="meta">TxID: 0x9a1...f4e</div>
+      <div class="status">✓ Confirmed</div>
+    </div>
+    <div class="entry">
+      <div class="title">💸 Debited</div>
+      <div class="amount debit">- ₹162.00</div>
+      <div class="meta">To: MetaMask</div>
+      <div class="meta">TxID: 0xa4d...cc3</div>
+      <div class="status">✓ Confirmed</div>
+    </div>
+    <div class="divider"></div>
+
+  </div>
+</body>
+</html>
